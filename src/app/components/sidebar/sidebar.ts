@@ -3,6 +3,7 @@ import { NgFor } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { ModalService } from '../../services/modal';
 import { ConfirmModalService } from '../confirm-modal/confirm-modal';
+import { WhiteModalService } from '../../services/white-modal';
 
 @Component({
   imports: [NgFor, RouterLink, RouterLinkActive],
@@ -13,6 +14,7 @@ import { ConfirmModalService } from '../confirm-modal/confirm-modal';
 export class Sidebar {
   modalService = inject(ModalService);
   confirmModalService = inject(ConfirmModalService);
+  whiteModalService = inject(WhiteModalService);
 
   menuItems = [
     { label: '🏠 Home', route: '/home' },
