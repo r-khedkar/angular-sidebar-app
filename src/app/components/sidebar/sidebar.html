@@ -1,0 +1,19 @@
+<nav class="sidebar">
+  <div class="sidebar-brand">
+    <span class="brand-icon">&#9889;</span>
+    <span class="brand-name">MyApp</span>
+  </div>
+  <ul class="nav-list">
+    <li class="nav-item" *ngFor="let item of menuItems">
+      <a
+        class="nav-link"
+        [routerLink]="item.route"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }">
+        {{ item.label }}
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
