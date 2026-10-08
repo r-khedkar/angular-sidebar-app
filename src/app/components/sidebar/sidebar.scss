@@ -7,6 +7,8 @@
   padding: 0;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
   flex-shrink: 0;
+  position: relative;
+  z-index: 1200;
 
   .sidebar-brand {
     display: flex;
