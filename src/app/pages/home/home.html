@@ -1,6 +1,25 @@
 <div class="page">
   <h1 class="page-title">&#127968; Home</h1>
   <p class="page-subtitle">Welcome to MyApp! This is the home page.</p>
+
+  <div class="card">
+    <h2>Interactive Modal Demonstrations</h2>
+    <p>Test the popups using the buttons below or from the sidebar menu on the left:</p>
+    <div style="display: flex; gap: 12px; margin-top: 16px; flex-wrap: wrap;">
+      <button
+        (click)="confirmModalService.open()"
+        style="background: #0b1120; color: #ffffff; border: 1px solid #334155; padding: 10px 18px; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+        &#9989; Open Confirm Drawer (Image Design)
+      </button>
+
+      <button
+        (click)="modalService.open()"
+        style="background: #3b82f6; color: #ffffff; border: none; padding: 10px 18px; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(59,130,246,0.25);">
+        &#128276; Open Center Modal
+      </button>
+    </div>
+  </div>
+
   <div class="card">
     <h2>Getting Started</h2>
     <p>Use the sidebar on the left to navigate between pages.</p>

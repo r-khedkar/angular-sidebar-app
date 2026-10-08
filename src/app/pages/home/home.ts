@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ModalService } from '../../services/modal';
+import { ConfirmModalService } from '../../components/confirm-modal/confirm-modal';
 
 @Component({
   imports: [],
@@ -6,4 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './home.scss',
   templateUrl: './home.html',
 })
-export class Home {}
+export class Home {
+  modalService = inject(ModalService);
+  confirmModalService = inject(ConfirmModalService);
+}
