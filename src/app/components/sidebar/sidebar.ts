@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { ModalService } from '../../services/modal';
 
 @Component({
   imports: [NgFor, RouterLink, RouterLinkActive],
@@ -9,6 +10,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   templateUrl: './sidebar.html',
 })
 export class Sidebar {
+  modalService = inject(ModalService);
+
   menuItems = [
     { label: '🏠 Home', route: '/home' },
     { label: '📖 About', route: '/about' },

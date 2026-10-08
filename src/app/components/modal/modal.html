@@ -1,0 +1,19 @@
+@if (modalService.isOpen()) {
+  <div class="modal-overlay" (click)="modalService.close()">
+    <div class="modal-box" (click)="$event.stopPropagation()">
+      <div class="modal-header">
+        <h2 class="modal-title">&#128276; Notification</h2>
+        <button class="modal-close" (click)="modalService.close()">&#10005;</button>
+      </div>
+      <div class="modal-body">
+        <p>&#127881; This is a simple modal popup!</p>
+        <p>You can put any content here — forms, messages, confirmations, etc.</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" (click)="modalService.close()">Cancel</button>
+        <button class="btn-primary" (click)="modalService.close()">Got it!</button>
+      </div>
+    </div>
+  </div>
+}
+
